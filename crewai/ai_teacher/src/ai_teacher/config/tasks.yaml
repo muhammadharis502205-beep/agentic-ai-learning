@@ -1,0 +1,8 @@
+teach:
+  description: >
+    Explain the following question in simple words:
+    {question}
+  expected_output: >
+    A simple explanation with one easy example.
+  agent: teacher
+

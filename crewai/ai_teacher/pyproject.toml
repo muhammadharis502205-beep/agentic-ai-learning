@@ -1,0 +1,25 @@
+[project]
+name = "ai_teacher"
+version = "0.1.0"
+description = "ai_teacher using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=1.15.16,<2.0.0"
+]
+
+[project.scripts]
+ai_teacher = "ai_teacher.main:run"
+run_crew = "ai_teacher.main:run"
+train = "ai_teacher.main:train"
+replay = "ai_teacher.main:replay"
+test = "ai_teacher.main:test"
+run_with_trigger = "ai_teacher.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
+project_id = "9cbfa135-775b-4d63-81c7-f10d6721fa7c"
