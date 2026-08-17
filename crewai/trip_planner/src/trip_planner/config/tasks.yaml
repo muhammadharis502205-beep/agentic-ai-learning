@@ -1,0 +1,47 @@
+research_task:
+  description: >
+    Research {destination} for a {duration}-day trip.
+
+    Find important attractions, activities, transportation options,
+    recommended areas to stay, local travel tips, and other useful
+    information for planning the trip.
+
+  expected_output: >
+    A structured research report about {destination} containing
+    attractions, activities, transportation, accommodation areas,
+    and useful travel tips.
+
+  agent: research_agent
+
+
+budget_task:
+  description: >
+    Create a realistic estimated budget for a {duration}-day trip
+    to {destination} for {travelers} travelers.
+
+    Consider accommodation, food, transportation, activities,
+    and miscellaneous expenses.
+
+  expected_output: >
+    A structured trip budget showing estimated costs for accommodation,
+    food, transportation, activities, miscellaneous expenses, and
+    the total estimated cost.
+
+  agent: budget_agent
+
+
+itinerary_task:
+  description: >
+    Using the destination research and budget information, create
+    a practical {duration}-day itinerary for {destination}.
+
+    Organize the trip day by day. Include attractions, activities,
+    meals, transportation suggestions, estimated daily spending,
+    and useful travel tips.
+
+  expected_output: >
+    A clear day-by-day travel itinerary for {destination} that includes
+    activities, attractions, transportation suggestions, meals,
+    estimated spending, and useful travel tips.
+
+  agent: itinerary_writer
