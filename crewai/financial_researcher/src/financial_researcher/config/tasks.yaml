@@ -1,0 +1,37 @@
+research_task:
+  description: >
+    Research {company} using the available web search tool.
+
+    Find relevant and recent information about:
+    - Company overview
+    - Financial performance
+    - Revenue and profit
+    - Recent financial news
+    - Market position
+    - Major business developments
+    - Important risks
+
+    Focus on reliable and relevant information.
+  expected_output: >
+    A structured research report containing the key financial
+    information and sources about {company}.
+  agent: researcher
+
+analysis_task:
+  description: >
+    Analyze the financial research collected about {company}.
+
+    Identify:
+    - Key financial strengths
+    - Financial weaknesses
+    - Important trends
+    - Major risks
+    - Business opportunities
+    - Overall financial outlook
+
+    Do not invent information. Base the analysis on the research provided.
+  expected_output: >
+    A clear and well-structured financial analysis of {company}
+    with an executive summary, key findings, risks, opportunities,
+    and overall outlook.
+  agent: analyst
