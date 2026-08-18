@@ -35,8 +35,8 @@ Learn, build, and document real-world AI agent projects using multiple framework
 
 - [x] Repository Setup
 - [x] OpenAI Agents SDK Environment
-- [ ] OpenAI Agents SDK Projects
+- [X] OpenAI Agents SDK Projects
 - [ ] LangGraph
-- [ ] CrewAI
+- [X] CrewAI
 - [ ] AutoGen
 - [ ] Agno
