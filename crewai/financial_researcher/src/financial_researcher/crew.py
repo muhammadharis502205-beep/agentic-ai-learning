@@ -33,7 +33,7 @@ class FinancialResearcher():
         )
 
     @agent
-    def analyst(self) -> Agent:
+    def  analyst(self) -> Agent:
         return Agent(
             config=self.agents_config['analyst'], # type: ignore[index]
             verbose=True,
