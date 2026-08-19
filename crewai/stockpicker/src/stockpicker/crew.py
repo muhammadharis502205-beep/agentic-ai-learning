@@ -161,6 +161,7 @@ class Stockpicker:
         return Task(
             config=self.tasks_config["find_trending_companies"],
             output_pydantic=TrendingCompanies,
+            output_file="output/trending_companies.json",
         )
 
     @task
@@ -168,6 +169,7 @@ class Stockpicker:
         return Task(
             config=self.tasks_config["research_companies"],
             output_pydantic=FinancialResearch,
+            output_file="output/financial_research.json"
         )
 
     @task
@@ -175,6 +177,7 @@ class Stockpicker:
         return Task(
             config=self.tasks_config["pick_best_stock"],
             output_pydantic=StockRecommendation,
+            output_file="output/stock_recommendation.json"
         )
 
     # =========================
