@@ -1,0 +1,86 @@
+find_trending_companies:
+  description: >
+    Find exactly three companies that are currently trending in the stock market.
+
+    Use the Serper search tool to research recent market news, company
+    developments, investor interest, and other relevant information.
+
+    For each company, identify:
+    - Company name
+    - Stock ticker
+    - Why the company is trending
+    - Important recent developments
+    - Supporting information from your research
+
+    Focus on recent and reliable information. Avoid selecting companies
+    without sufficient evidence that they are currently trending.
+
+  expected_output: >
+    A structured research result containing exactly three trending companies,
+    with the evidence and reasoning for why each company is trending.
+
+  agent: trending_company_researcher
+
+
+research_companies:
+  description: >
+    Research the three companies identified by the Trending Company Researcher.
+
+    Use the Serper search tool to investigate each company.
+
+    For each company, analyze:
+    - Financial performance
+    - Revenue and earnings trends
+    - Business growth
+    - Recent company developments
+    - Competitive position
+    - Growth opportunities
+    - Major risks
+    - Overall investment potential
+
+    Base the analysis on recent and reliable information. Clearly distinguish
+    factual information from your analysis.
+
+  expected_output: >
+    A structured financial research report covering all three companies,
+    including their strengths, weaknesses, opportunities, risks, and overall
+    investment potential.
+
+  agent: financial_researcher
+
+
+pick_best_stock:
+  description: >
+    Analyze the financial research provided by the Financial Researcher.
+
+    Compare all three companies based on:
+    - Financial strength
+    - Growth potential
+    - Recent developments
+    - Competitive position
+    - Investment potential
+    - Risk level
+
+    Select exactly one company as the best stock.
+
+    Do not introduce a company that was not included in the research.
+
+    After selecting the best company, you MUST use the Pushover notification
+    tool to send the final recommendation to the user.
+
+    The Pushover notification MUST include:
+    - Company name
+    - Stock ticker
+    - Final recommendation
+    - Main reasons for selecting the company
+    - Important risks
+
+    Call the Pushover tool only after you have completed your analysis
+    and selected the best company.
+
+  expected_output: >
+    A structured stock recommendation containing the selected company,
+    ticker, recommendation, reasons, comparison with the other companies,
+    and important risks.
+
+  agent: stock_picker
